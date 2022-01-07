@@ -1,0 +1,339 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+  }
+html {
+    scroll-behavior: smooth;
+  }
+body{
+    font-family: montserrat;
+    overflow-x: hidden;
+}
+  /**The Navigation and front text background**/
+.maincontainer{
+    background-image: linear-gradient(to top,rgba(28, 28, 28, 0.9), rgba(1,1,1,0.5)), url(./contact.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: none;
+    background-attachment: fixed;
+    height:70vh;
+    width: 100%;
+    
+  }
+  /**The Navigation**/
+nav{
+    
+    height: 15vmin;
+    width: 100%;
+  }
+.logo{
+    height: 11vmin;
+    margin: 3vmin;
+    
+  }
+  nav ul{
+    float: right;
+    margin-right: 20px;
+  }
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 10px 5px 0px;
+  }
+  nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  a.active,a:hover{
+    background: rgb(241, 16, 61);
+    transition: .5s;
+  }
+  /**The fas button for smaller screen**/
+  .checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check{
+    display: none;
+  }
+
+  /**The main front text**/
+  .front_text_wrapper{
+    animation: zoomout 1s linear 1;
+    animation-delay: 1s;
+    
+    
+  }
+  @keyframes zoomout{
+    0%{
+        transform: scale(0.1);
+        visibility: visible;
+    }
+    100%{
+        transform: scale(1);
+        visibility: visible;
+    }
+    
+  }
+  
+  .front_text h1{
+    margin: 20vmin 0 0;
+    font-size: 10vmin;
+    text-align: center;
+    color: whitesmoke;
+    
+
+  }  
+  .line{
+    height: 0.4vmin;
+    margin-bottom: 20px;
+    background-color: rgb(241, 16, 61);
+  }
+ 
+  /**The main Body**/
+  .main_section{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 8vmin;
+  }
+  .contact,.form{
+      width: 43%;
+      margin: 2%;
+
+  }
+  .contact{
+    height: 100%;
+  }
+  .form{
+      position: relative;
+      height: 90%;
+      box-shadow:1px 1px 20px 1px  rgb(18, 2, 88); 
+      
+    }
+      
+  input, textarea, button{
+      margin: 1vmin;
+      display: block;
+      margin: 1vmin auto;
+
+  }
+  input{
+      width: 50vmin;
+      height: 5vmin;
+      transition: .5s ease;
+      box-shadow: 2px 2px 2px rgb(91,91,91);
+      border: 1px solid black;
+      text-align: center;
+  }
+      
+     
+    
+  ::placeholder{
+      text-align: center;
+  }
+  input:hover,input:focus{
+    width: 55vmin;
+    height:5vmin; 
+  }
+  
+  textarea{
+    transition: .5s ease;
+    box-shadow: 2px 2px 2px rgb(91,91,91);
+    border: 1px solid black;
+    width: 50vmin;
+    height: 50vmin;
+  }
+  button{
+      background-color: rgb(18, 2, 88);
+      outline: none;
+      border: none;
+      height: 7vmin;
+      width: 20vmin;
+      font-weight: bolder;
+      color: whitesmoke;
+      border-radius: 7px;
+      transition: .5s ease;
+    }
+    button:hover{
+        background-color: #fff;
+        color: rgb(18, 2, 88) ;
+        border: 1px solid rgb(18, 2, 88);
+    }
+
+    .partners{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 5vmin 20vmin;
+    }
+    .partners img{
+      width: 15vmin;
+      height: 15vmin;
+    }
+    .partners img:hover,.partners img:focus{
+      animation:spin 4s linear infinite;
+    }
+    @keyframes spin {
+       100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+  /**The footer**/
+  footer{
+    background-image: linear-gradient(to bottom,rgba(28, 28, 28, 0.7), rgba(1,1,1,0.9)), url(./footer.jpg);
+    background-position: cover;
+    background-size: cover;
+  }
+  .footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 4%;
+    
+  
+  }
+  .second_foot{
+    text-align: center;
+    margin-top: auto;
+    color: whitesmoke;
+  }
+  .second_foot img{
+    width: 40px;
+    height: 40px;
+  }
+  .first_foot img{
+    margin-left: 30% !important;
+  }
+  .first_foot p{
+    color: whitesmoke;
+    text-align: center;
+  }
+  .main_foot{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 2%;
+    color: whitesmoke;
+    
+  }
+  .main_foot p{
+    margin: 20px 0px;
+  
+  }
+  .footer_line{
+    height: 1px;
+    background-color: whitesmoke;
+    margin-top: 20px;
+  }
+  .powered{
+    margin-right: 6% !important;
+  }
+  
+  
+  
+    
+  /**Small screen query**/
+  
+  @media (max-width: 952px){
+    label.logo{
+      font-size: 30px;
+      padding-left: 50px;
+    }
+    nav ul li a{
+      font-size: 16px;
+    }
+  }
+  @media (max-width: 858px){
+    .checkbtn{
+      display: block;
+    }
+    ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #282828;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+      border-top-left-radius: 25px;
+      border-top-right-radius: 25px;
+    }
+    nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+    nav ul li a{
+      font-size: 20px;
+    }
+    a:hover,a.active{
+      background: none;
+      color: rgb(241, 16, 61) ;
+    }
+    #check:checked ~ ul{
+      left: 0;
+    }
+    
+    .main_section{
+        display: block;
+        text-align: center;
+        
+    }
+    .footer{
+      display: block;
+      text-align: center;
+    }
+    .main_foot{
+      display: block;
+      text-align: center;
+    }
+    .contact,.form{
+        width: 98%;
+  
+    }
+    .partners{
+      display: block;
+      width: 100%;
+      margin: 0px;
+  
+      
+    }
+    .partners img{
+      width: 10vmin;
+      height: 10vmin;
+      margin-top: 5vmin;
+      margin-bottom: 2vmin;
+      margin-left: 16vmin;
+      
+    }
+    .first_foot img{
+      margin-left: 7% !important;
+    }
+    .second_foot h4{
+      margin-top: 10px;
+    }
+    .main_foot p{
+      margin-top: 20px;
+      margin-bottom: 0px;
+  
+    }
+    .powered{
+      margin-left: 8% !important;
+    }
+    .second_foot img{
+      margin-top: 20px;
+    }
+    .front_text_wrapper{
+      margin-top: 5vmin;
+    }
+  }
